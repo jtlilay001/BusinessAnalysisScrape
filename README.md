@@ -8,7 +8,12 @@ The Business Analysis tool is a web scraper built using python to scrape for fit
 3. contact information 
 4. hours of operation. 
 
-The program then sorts the extracted information according to boroughs and groups the business according to zip code. 
+The program uses the location of the fitness center and saves it inside a county list. 
+
 
 # Getting Started # 
 Before starting the web scraping process, python first needs to be installed.  
+
+
+# Built Using # 
+[python](https://www.python.org/) 
