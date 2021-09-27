@@ -1,5 +1,5 @@
-# BusinessAnalysisScrape
-Web scraper application used to obtain contact information of fitness centers in NYC 
+# BusinessAnalysisScrape # 
+This documentation serves as a web scraping outline for anyone who is working with FitKO and is new to webscraping. The documentation provided will go over how to scrape contact information from businesses for marketing purposes. Note that each scraping project is different and the toolset used will differ based on company needs. The web scraping application for this purpose is written using the scrapy fraamework and is focused on obtaining contact information for fitness centers in NYC.  
 
 # About # 
 The Business Analysis tool is a web scraper built using python to scrape for fitness centers in NYC. The web scraper was built using the scrapy framework and scrapes for the following information 
@@ -10,16 +10,47 @@ The Business Analysis tool is a web scraper built using python to scrape for fit
 
 The program uses the location of the fitness center and saves it inside a county list. 
 
-
 # Getting Started # 
-Before starting the web scraping process, python first needs to be installed.  
+##### Installing Python
+Before starting the web scraping process, Python first needs to be installed; this can be done by downloading python directly from their website [python](https://www.python.org/downloads/). After installing python, make sure that python is installed by running the local command on the command line. 
+```
+C:> py --version
+```
+##### Installing Pip #####
+After succesfully installing python, you can check to see whether the package installer for python has been installed. This is done by running the following command on the command line 
+```
+C:> py -m pip --version 
+```
+If you received an error, saying that pip is not recognized or installed, you will need to isntall pip. There are two ways of installing pip, the first includes the use of a module called [ensurepip](https://docs.python.org/3/library/ensurepip.html#module-ensurepip), while the second alternative involves the use of [get-pip.py](https://github.com/pypa/get-pip).  
 
-# Prerequisite # 
-Installing Scrapy 
+##### Creating a directory #####
+Package modules are often installed within a virtual environment. The virtual environment is used to manage packages for different projects. By installing a virtual environment, you are preventing python packages from installing globally which could break any existing projects if they're using different versions of the same package. 
+
+A virtual environment is created in a directory. The directory can be created using the ```mkdir``` command in the command line. After creating the directory, you can change the directory to the newly created directory using the ```cd``` command. 
+
+##### Installing Virtualenv #####
+After creating the directory, you can go ahead and install the virtual environment. Depending on the version of python that you installed, the command will differ. For users using Python 2, you need to install a virtual environment before creating a virtual environment. The following command is used to install the virtual environment 
+
 ```
-pip install scrapy 
+C:> py -m pip install --user virtualenv
 ```
+If you are using Python 3, then you can use the ```venv``` module which will create and manage the virtual environment for your project. 
+
+##### Creating Virtual Environment #####
+To create a virtual environment in the project directory, run ```virtualenv``` or ```venv``` followed by the name of the virtual environment. Note that the name of the virtual environment can be called whatever you want depending on the version of python that you're using. 
+
+```
+C:> py -m venv env
+```
+
+##### Installing Scrapy ##### 
+
+
+
+
+
 
 # Built Using # 
 * [Python](https://www.python.org/) 
+* [Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 
 * [Scrapy](https://www.python.org/) 
