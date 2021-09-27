@@ -1,5 +1,5 @@
 # BusinessAnalysisScrape # 
-This documentation serves as a web scraping outline for anyone who is working with FitKO and is new to webscraping. The documentation provided will go over how to scrape contact information from businesses for marketing purposes. Note that each scraping project is different and the toolset used will differ based on company needs. The web scraping application for this purpose is written using the scrapy fraamework and is focused on obtaining contact information for fitness centers in NYC.  
+This documentation serves as a web scraping outline for anyone who is working with FitKO and is new to webscraping or programming in python. The documentation provided will go over how to scrape contact information from businesses for marketing purposes. Note that each scraping project is different and the toolset used will differ based on company needs. The web scraping application for this purpose is written using the scrapy fraamework and is focused on obtaining contact information for fitness centers in NYC.  
 
 # About # 
 The Business Analysis tool is a web scraper built using python to scrape for fitness centers in NYC. The web scraper was built using the scrapy framework and scrapes for the following information 
@@ -42,6 +42,25 @@ To create a virtual environment in the project directory, run ```virtualenv``` o
 ```
 C:> py -m venv env
 ```
+
+To actiave the virtual environment, you will need to go to your virtual environment directory that was created and then to the Scripts directory. 
+
+```
+C:> ./env/Scripts/activate
+```
+##### Setting Execution Policies in Powershell #####
+
+In the event that the script is not able to activate, you will need to [Set-ExecutionPolicy](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.1) 
+> Powershell's execution policy is a safety feature that controls the conditions under which it loads configuration files and loads scripts. 
+It’s intended to prevent any malicious scripts from running. In order to enable the virtual environment, the RemoteSigned policy needs to be enforced. The RemoteSigned policy allows scripts to run. 
+
+```
+Set-ExecutionPolicy -ExecutionPolicy <PolicyName> -Scope <scope>
+```
+
+##### Activating Virtual Environment ##### 
+Once the virtual environment has been created, you will need to activate it before you can install or use packages. Activating the the virtual environment will allow you to place your pip executables in the shells PATH. 
+
 
 ##### Installing Scrapy ##### 
 
