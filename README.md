@@ -1,16 +1,16 @@
 # BusinessAnalysisScrape # 
-This documentation serves as a web scraping outline for anyone who is working with FitKO and is new to webscraping or programming in python. The documentation provided will go over how to scrape contact information from businesses for marketing purposes. Note that each scraping project is different and the toolset used will differ based on company needs. The web scraping application for this purpose is written using the scrapy fraamework and is focused on obtaining contact information for fitness centers in NYC.  
+This documentation serves as a web scraping outline for anyone who is working with FitKO and is new to webscraping in python. The documentation provided will go over how to scrape contact information from local businesses for informational purposes only. Note that each scraping project is different and the toolset used will differ based on company needs. The web scraper in this example is written using the scrapy framework and is focused on obtaining general information from fitness centers in NYC. The information is then formatted in a JSON file and CSV file.  
 
 # About # 
-The Business Analysis tool is a web scraper built using python to scrape for fitness centers in NYC. The web scraper was built using the scrapy framework and scrapes for the following information 
+The Business Analysis tool is a web scraper built using python and scrapy library to scrape for fitness centers in NYC. The web scraper scrapes for the following information 
 1.  Business name 
 2.  Location 
 3.  Contact information 
-4.  Hours of operation. 
-
-The program uses the location of the fitness center and saves it inside a county list. 
+4.  Hours of operation 
 
 # Getting Started # 
+
+### Prerequisites ### 
 ##### Installing Python
 Before starting the web scraping process, Python first needs to be installed; this can be done by downloading python directly from their website [python](https://www.python.org/downloads/). After installing python, make sure that python is installed by running the local command on the command line. 
 ```
@@ -67,10 +67,36 @@ Set-ExecutionPolicy
    [<CommonParameters>]
 ```
 
-
-
 ##### Installing Scrapy ##### 
+Now that the virtual environment has been activated, you can start installing packages. The webscraping application will be used to extract information from websites, hence scrapy is used. To install scrapy, the following command is used 
+```
+C:> pip install scrapy 
+```
 
+# Fitness Center Scraping #
+##### Creating Project #####
+
+In order to create the webscraping project, you need to use the scrapy command-line tool. In the command line, the following command is used 
+```
+C:> scrapy startproject <project_name> [project_dir]
+```
+* ``` startproject: ``` Creates a new project named project_name under the project_dir directory. If the project_dir name was not specified, then it inherits the name of the project_name 
+
+After creating the project, you need to navigate to the project directory using the ```cd``` command. 
+```
+C:> cd fitnessCenters/business_information 
+```
+Now you can control and manage the scrapy tools. 
+
+##### Generating Spiders #####
+
+Spiders are classes and are the blueprints in which objects are created. Objects inherit the spiders behaviours 
+
+```
+C:> scrapy genspider [-t template] <name> <domain>
+```
+* ``` name: ``` Creates a unique name for the spider to instantiate. The name must be declared when generating spider as this will allow the scraping process to continue. 
+* ``` domain: ``` The domain is the url of the page being scraped. By default, the domain generates the ``` [allowed_domains] ``` and ``` [start_urls] ``` attributes. 
 
 
 
@@ -78,5 +104,6 @@ Set-ExecutionPolicy
 
 # Built Using # 
 * [Python](https://www.python.org/) 
+* [JSON](https://www.json.org/json-en.html) 
 * [Excel](https://www.microsoft.com/en-us/microsoft-365/excel) 
 * [Scrapy](https://www.python.org/) 
