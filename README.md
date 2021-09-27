@@ -15,7 +15,7 @@ The program uses the location of the fitness center and saves it inside a county
 Before starting the web scraping process, python first needs to be installed.  
 
 # Prerequisite # 
-## Installing Scrapy 
+pip install scrapy 
 
 
 # Built Using # 
