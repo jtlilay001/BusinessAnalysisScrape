@@ -16,4 +16,5 @@ Before starting the web scraping process, python first needs to be installed.
 
 
 # Built Using # 
-[python](https://www.python.org/) 
+[Python](https://www.python.org/) 
+[Scrapy](https://www.python.org/) 
