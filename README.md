@@ -1,5 +1,5 @@
 # BusinessAnalysisScrape # 
-This documentation serves as a web scraping outline for anyone who is working with FitKO and is new to webscraping in python. The documentation provided will go over how to scrape contact information from local businesses for informational purposes only. Note that each scraping project is different and the toolset used will differ based on company needs. The web scraper in this example is written using the scrapy framework and is focused on obtaining general information from fitness centers in NYC. The information is then formatted in a JSON file and CSV file.  
+This documentation serves as a web scraping outline for anyone working with FitKO and is new to webscraping in python. The documentation provided will go over how to scrape contact information from local businesses for informational purposes only. Note that each scraping project is different and the toolset used will differ based on company needs. The web scraper in this example is written using the scrapy framework and is focused on obtaining general information from fitness centers in NYC. The information is then formatted in a JSON file and CSV file.  
 
 # About # 
 The Business Analysis tool is a web scraper built using python and scrapy library to scrape for fitness centers in NYC. The web scraper scrapes for the following information 
