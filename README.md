@@ -37,7 +37,7 @@ C:> py -m pip install --user virtualenv
 If you are using Python 3, then you can use the ```venv``` module which will create and manage the virtual environment for your project. 
 
 ##### Creating Virtual Environment #####
-To create a virtual environment in the project directory, run ```virtualenv``` or ```venv``` followed by the name of the virtual environment. The name of the virtual environment ```env ``` can be called whatever you want. 
+To create a virtual environment in the project directory, run ```virtualenv``` or ```venv``` followed by the name of the virtual environment. The name of the virtual environment ```env``` can be called whatever you want. 
 
 ```
 C:> py -m venv env
