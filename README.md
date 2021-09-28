@@ -37,7 +37,7 @@ C:> py -m pip install --user virtualenv
 If you are using Python 3, then you can use the ```venv``` module which will create and manage the virtual environment for your project. 
 
 ##### Creating Virtual Environment #####
-To create a virtual environment in the project directory, run ```virtualenv``` or ```venv``` followed by the name of the virtual environment. Note that the name of the virtual environment can be called whatever you want depending on the version of python that you're using. 
+To create a virtual environment in the project directory, run ```virtualenv``` or ```venv``` followed by the name of the virtual environment. The name of the virtual environment ```env ``` can be called whatever you want. 
 
 ```
 C:> py -m venv env
@@ -74,6 +74,8 @@ C:> pip install scrapy
 ```
 
 # Fitness Center Scraping #
+We're going to start off by first building a web scraper that scrapes one page. After getting familiar, we are going to scrape multiple pages. The website that we're using is yellowpagecity. It's important to note that not all websites will allow you to scrape their websites and that you need to make sure that the website allows you to scrape. This means reading the sites terms and conditions. 
+
 ##### Creating Project #####
 
 In order to create the webscraping project, you need to use the scrapy command-line tool. In the command line, the following command is used 
