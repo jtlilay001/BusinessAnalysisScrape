@@ -1,24 +1,27 @@
 import scrapy
 
-
-class YellowpagesSpider(scrapy.Spider):
-    name = 'yellowpages'
-    allowed_domains = ['yellowpagecity.com']
-    start_urls = ['http://www.yellowpagecity.com/US/NY/Flushing/Health+Clubs']
+class YellowpagecitySpider(scrapy.Spider):
+    name = 'yellowpagecity'; 
+    start_urls = ['http://www.yellowpagecity.com/US/NY/New+York/Health+Clubs/']; 
+    
 
     def parse(self, response):
-        businesses = response.xpath('//a[@class="listing-wrap"]');
-
-        # Get the address and the phone numbr of the business. 
-        for business in businesses: 
-            name = business.xpath('.//span[@id="name"]/text()').get(); 
-            address = business.xpath('.//span[@id="address"]/text()').get(); 
-            phone = business.xpath('.//span[@id="phone"]/text()').get(); 
-
+        # Access the container that contains the information of the business. 
+        listings = response.xpath('//a[@class="listing-wrap"]'); 
+        
+        for listing in listings: 
+            # get the name, address and phone number of the business. 
+            name = listing.xpath('.//span[@id="name"]/text()').get(); 
+            address = listing.xpath('.//span[@id="address"]/text()').get(); 
+            phone = listing.xpath('.//span[@id="phone"]/text()').get();
+            
             yield {
-                'business_name': name, 
+                'name': name, 
                 'address': address, 
-                'phone': phone 
-            } 
+                'phone': phone
+            }
 
-n
+            # Define the next page 
+            next_page = response.xpath('//div[@class="panel-footer"]/div[@class="pages"]//a[@class="bookNav next-page"]/@href').get()
+            if next_page is not None: 
+                yield response.follow(next_page, callback=self.parse);
